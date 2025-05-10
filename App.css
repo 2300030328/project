@@ -1,0 +1,343 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background: #f4f4f4;
+}
+
+#container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e90ff;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 60px;
+}
+
+.site-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.site-title span {
+  color: #ffcc00;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.auth label {
+  cursor: pointer;
+}
+
+.auth img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+/* Hero Section with Background Image */
+/* Hero Section with Background Image */
+.hero {
+  background: url('/ill.webp') no-repeat center center/cover; /* Background image */
+  color: #fff; 
+  text-align: center;
+  padding: 100px 20px;
+  position: relative; /* For layering */
+  min-height: 600px; /* Increased height to fit the search section */
+}
+.text1 {
+  font-size: 30px;
+  color: #ffcc00;
+}
+
+.text2 {
+  font-size: 22px;
+  color: #f1f1f1;
+}
+
+.text3 {
+  font-size: 18px;
+  color: #ddd;
+}
+
+.hero label {
+  display: block;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  z-index: 1;
+  position: relative;
+  color: #fff; /* Text color */
+}
+
+/* Semi-transparent overlay for readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 0;
+}
+
+/* Styling the Search Section */
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+  z-index: 1; 
+  position: relative;
+}
+
+.search-section input {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  width: 250px; 
+}
+
+.search-section button {
+  padding: 12px 30px;
+  font-size: 16px;
+  color: #fff;
+  background: #ff6347; /* Tomato color button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-section button:hover {
+  background: #ff4500; /* Darker hover effect */
+}
+
+/* Featured Recipes Section */
+.featured-recipes {
+  background: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 40px 0;
+}
+
+.featured-recipes h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.recipe-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.recipe {
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: calc(33.33% - 20px);
+}
+
+.recipe:hover {
+  transform: translateY(-10px);
+}
+
+.recipe img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.recipe h3 {
+  font-size: 24px;
+  color: #333;
+  margin: 15px 0 10px;
+  cursor: pointer;
+}
+
+.recipe p {
+  font-size: 16px;
+  color: #555;
+  padding: 0 15px 15px;
+  cursor: pointer;
+}
+
+/* Footer */
+#footer {
+  background: #1e90ff;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+#footer label {
+  font-size: 14px;
+}
+
+.social-icons img {
+  width: 30px;
+  margin: 0 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Popup Styles */
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#popupWindow {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.signinTitle, .signupTitle {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1e90ff;
+}
+.signinspan {
+  color: #1e90ff; /* Blue color */
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.signinspan:hover {
+  color: #0078d4; /* Darker blue on hover */
+}
+
+/* Added styling for signupnowlabel for light blue color and cursor pointer */
+.signupnowlabel {
+  color: #ADD8E6; /* Light blue color */
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.signupnowlabel:hover {
+  color: #87cefa; /* Slightly darker light blue on hover */
+}
+
+.signindiv label, .signupdiv label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.signindiv input, .signupdiv input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.forgotpassworddiv {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: right; 
+}
+
+.forgotpasswordlabel {
+  color: rgb(13, 130, 104);
+  padding-left: 5px;
+  cursor: pointer;
+  text-decoration: underline;  /* To make it look like a clickable link */
+}
+
+
+button {
+  background: #1e90ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0078d4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .recipe-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .recipe {
+    width: 100%;
+  }
+
+  .search-section {
+    flex-direction: column;
+  }
+
+  .search-section input {
+    width: 100%;
+  }
+
+  .hero label {
+    font-size: 28px;
+  }
+}
+
+.input-error {
+  border: 2px solid red !important;
+}
+
+
